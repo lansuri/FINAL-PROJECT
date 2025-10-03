@@ -7,7 +7,7 @@ import { useEffect } from 'react'
 export const MyContext = createContext()
 const ContextProvider = ({ children }) => {
 
-    const url = "http://localhost:8080"
+    const url = "https://fresh-backend-jx0r.onrender.com"
 
     var [category, setCategory] = useState("")
     var [type, setType] = useState("")
@@ -50,7 +50,7 @@ const ContextProvider = ({ children }) => {
                 category, desc, price, img, type
             }
 
-            await axios.post(`http://localhost:8080/product/add`, formData)
+            await axios.post(`${url}/product/add`, formData)
             alert("Product Added")
             
             setCategory("")
