@@ -7,6 +7,6 @@ export default defineConfig({
   server:{
      host:"0.0.0.0",
      port: 8080,
-     allowedHosts:["frontenf-adwh.onrender.com"]
+     allowedHosts:["frontend1-adwh.onrender.com"]
   }
 })
