@@ -11,7 +11,7 @@ export  const MyContext   = createContext()
 
 const MyContextProvider = ({children}) => {
      
-   const url='http://localhost:8080'
+   const url="https://fresh-backend-jx0r.onrender.com"
 
    const navigate = useNavigate()
    const [input , setInput] = useState("")
@@ -130,6 +130,8 @@ const MyContextProvider = ({children}) => {
 
    const grandTotal = cart.reduce((acc , item) => acc + item.price*item.quantity,0);
 
+   const totalitem = cart.reduce((sum , item) => sum + item.quantity,0);
+
    const ContextValue = {
     navigate,
     setInput,
@@ -148,6 +150,7 @@ const MyContextProvider = ({children}) => {
     AddtocartFun,
     RemoveCartFun,
     grandTotal,
+    totalitem,
     
   }
   return (

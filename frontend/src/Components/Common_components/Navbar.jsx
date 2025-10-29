@@ -4,7 +4,7 @@ import { MyContext } from '../../Context/MyContextProvider'
 import{Link} from 'react-router-dom'
 
 const Navbar = () => {
-    const{LogOutFun,SearchFun,setInput,grandTotal,RemoveCartFun,cart,setCart,filteredData}=useContext(MyContext)
+    const{LogOutFun,SearchFun,setInput,grandTotal,RemoveCartFun,cart,setCart,filteredData,totalitem}=useContext(MyContext)
 
    
   return (
@@ -48,7 +48,20 @@ const Navbar = () => {
          <img src={alldatas.search} alt="" height={40} id='searchimg' className='d-none d-lg-block d-flex'/>
          </form>
          {/* ========================cart============================ */}
-          <i className="fa-solid fa-cart-shopping my-1 ms-5" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"  style={{color:'white',fontSize:'30px'}} id='cart' ></i>
+          <div className="position-relative d-inline-block ms-auto me-4">
+                
+          <i className="fa-solid fa-cart-shopping my-1 ms-5 position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"  style={{color:'white',fontSize:'30px'}} id='cart' ></i>
+          {
+            totalitem > 0 &&(
+          <span class="position-absolute top-0 start-80 translate-middle badge rounded-pill bg-danger">
+            {totalitem}
+
+          </span>
+            )
+          }
+          
+          </div>
+        
        </div>
        </div>
 
@@ -136,7 +149,7 @@ const Navbar = () => {
     </select> */}
    
    
-    <Link to={"/fruit"} className='mx-5'>₹Fruits</Link>
+    <Link to={"/fruit"} className='mx-5'>Fruits</Link>
     
     
     <Link to={"/dairy"} className='mx-5'>Dairy Products</Link>
