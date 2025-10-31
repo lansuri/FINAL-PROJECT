@@ -7,6 +7,6 @@ export default defineConfig({
   server: {
     host: "0.0.0.0",
     port: 8080,
-    allowedHosts: [""]
+    allowedHosts: ["admin-cz12.onrender.com"]
   }
 })
