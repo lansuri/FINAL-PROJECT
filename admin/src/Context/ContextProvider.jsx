@@ -7,7 +7,7 @@ import { useEffect } from 'react'
 export const MyContext = createContext()
 const ContextProvider = ({ children }) => {
 
-    const url = "https://fresh-backend-jx0r.onrender.com"
+    const url = "https://fresh-backend-oo7b.onrender.com"
 
     var [category, setCategory] = useState("")
     var [type, setType] = useState("")
