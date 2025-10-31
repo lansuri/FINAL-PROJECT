@@ -6,7 +6,7 @@ import Flashdeal from '../Components/Home_page/Flashdeal'
 import Delivery from '../Components/Home_page/Delivery'
 import Deals from '../Components/Home_page/Deals'
 import Section from '../Components/Home_page/Section'
-import Slide from '../Components/Home_page/slide'
+import Slide from '../Components/Home_page/Slide'
 
 
 
