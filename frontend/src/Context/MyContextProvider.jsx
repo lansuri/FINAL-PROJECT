@@ -11,7 +11,7 @@ export  const MyContext   = createContext()
 
 const MyContextProvider = ({children}) => {
      
-   const url="https://fresh-backend-jx0r.onrender.com"
+   const url="https://fresh-backend-oo7b.onrender.com"
 
    const navigate = useNavigate()
    const [input , setInput] = useState("")
